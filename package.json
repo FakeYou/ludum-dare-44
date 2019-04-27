@@ -1,0 +1,50 @@
+{
+	"name": "ludum-dare-44",
+	"description": "",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "parcel index.html",
+		"format": "prettier --write \"**/*.{js,css,md}\"",
+		"posttest": "npm run format"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FakeYou/ludum-dare-44.git"
+	},
+	"keywords": [],
+	"author": "André Nanninga <andre@nannin.ga",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/FakeYou/ludum-dare-44/issues"
+	},
+	"homepage": "https://github.com/FakeYou/ludum-dare-44#readme",
+	"dependencies": {
+		"@types/tween.js": "^17.2.0",
+		"almost-equal": "^1.1.0",
+		"dynamics.js": "^1.1.5",
+		"keycode-js": "^1.0.4",
+		"orbit-controls-es6": "^2.0.0",
+		"parcel": "^1.12.3",
+		"three": "^0.104.0",
+		"tweakpane": "^1.0.4",
+		"tween.js": "^16.6.0"
+	},
+	"devDependencies": {
+		"husky": "^2.1.0",
+		"lint-staged": "^8.1.5",
+		"prettier": "^1.17.0",
+		"typescript": "^3.4.5"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,css,json,md}": [
+			"prettier --write",
+			"git add"
+		]
+	}
+}
